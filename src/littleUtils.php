@@ -4,6 +4,10 @@
  * See https://github.com/ppKrauss/php-little-utils
  */
 
+
+ // // // // // // // // // // // // // //
+ // // BEGIN:Terminal-Web
+
 /**
  * Check if is terminal or not.
  * @return boolean true when is client (terminal).
@@ -17,7 +21,7 @@ function is_cli() {
 /**
  * Gets options from the Web ($_REQUEST) or terminal (command line argument list).
  * The terminal behaviour is similar to the standard getopt() function.
- * Conventions: only long and required options, "--opt=val", are allowed, and only "-h" short-option is offered. 
+ * Conventions: only long and required options, "--opt=val", are allowed, and only "-h" short-option is offered.
  * @param $opts associative array with the 'name'/default pairs.
  * @param $is_cli when not null reuses the is_cli() flag.
  * @param $req_header
@@ -27,14 +31,14 @@ function is_cli() {
  */
 function getopt_std($opts=NULL,$is_cli=NULL,$req_header='',$h='cmd',$globalize=true) {
    $autoWscOpts = array('html'=>'h', 'xml'=>'x', 'json'=>'j', 'plain'=>'t', ''=>''); // autodetect
-   $r = array(); 
+   $r = array();
    if ($is_cli===NULL) $is_cli=is_cli();
-   if ($opts===NULL || !is_array($opts)) 
+   if ($opts===NULL || !is_array($opts))
       return NULL;
    elseif ($is_cli) {
       $a=array();
       foreach (array_keys($opts) as $k) $a[] = "$k:";
-      $r0 = getopt($h?'h':'', $a);      
+      $r0 = getopt($h?'h':'', $a);
       if ($h && isset($r0['h'])) {
          unset($r0['h']);
          $r0[$h]='info'; // or 'help'
@@ -47,7 +51,7 @@ function getopt_std($opts=NULL,$is_cli=NULL,$req_header='',$h='cmd',$globalize=t
       if ($globalize)  $GLOBALS[$name] = $r[$name];
    } // for
    if (isset($r['wsc']) && $r['wsc']=='a') { // auto-detect by HTTP headers
-    $r['wsc'] = $autoWscOpts[ parseHttpAccept($req_header['Accept']) ]; 
+    $r['wsc'] = $autoWscOpts[ parseHttpAccept($req_header['Accept']) ];
    }
    return $r;
 } // func
@@ -59,10 +63,10 @@ function getopt_std($opts=NULL,$is_cli=NULL,$req_header='',$h='cmd',$globalize=t
 
 /**
  * Reads entire CSV file into an array (or associative array or pair of header-content arrays).
- * Like build-in file() function, but to CSV handling. 
+ * Like build-in file() function, but to CSV handling.
  * @param $opt not-null (can be empty) associative array of options (sep,head,assoc,limit,enclosure,escape)
- * @param $length same as in fgetcsv(). 
- * @param $context same as in fopen(). 
+ * @param $length same as in fgetcsv().
+ * @param $context same as in fopen().
  * @return array (as head and assoc options).
  */
 function file_csv($file, $opt=[], $length=0, resource $context=NULL) {
@@ -70,8 +74,8 @@ function file_csv($file, $opt=[], $length=0, resource $context=NULL) {
 	$header = NULL;
 	$n=0; $nmax=(int)$opt['limit'];
 	$lines = [];
-	$h = fopen($file,'r',false,$context); // or $context? fopen(): fopen()
-	while( $h && !feof($h) && (!$nmax || $n<$nmax) ) 
+	$h = $context? fopen($file,'r',false,$context):  fopen($file,'r');
+	while( $h && !feof($h) && (!$nmax || $n<$nmax) )
 		if ( ($r=fgetcsv($h,$length,$opt['sep'],$opt['enclosure'],$opt['escape'])) && $n++>0 )
 			$lines[] = $opt['assoc']? array_combine($header,$r): $r;
 		elseif ($n==1)
@@ -86,14 +90,14 @@ function file_csv($file, $opt=[], $length=0, resource $context=NULL) {
  * @param $a mix NULL or array (handdled as reference) to be joined.
  * @param $sep string (default '; ') separator in the final string.
  * @param $pairSep string (default '=') pair separator (joins key-val pair).
- * @return mix NULL if $a is NULL, string if $a is array. 
+ * @return mix NULL if $a is NULL, string if $a is array.
  */
 function assoc_join(&$a,$sep='; ',$pairSep='=') {
-	return is_array($a)? 
+	return is_array($a)?
 		join($sep, array_map(
 			function($key) use ($a,$pairSep) {
 				$key = trim($key);
-				return "$key$pairSep{$a[$key]}"; 
+				return "$key$pairSep{$a[$key]}";
 			},
 			array_keys($a)
 		)):
@@ -122,7 +126,7 @@ function assoc_merge(&$a,$append) {
 function assoc_rename(&$a, $rename, $renameOverride=true) {
 	if (!is_array($a) || !is_array($rename))
 		return false;
-	foreach ($rename as $key=>$newKey) 
+	foreach ($rename as $key=>$newKey)
 		if ( array_key_exists($key, $a) && ($renameOverride || !array_key_exists($newKey, $a)) ) {
 			$a[$newKey] = $a[$key];
 			unset($a[$key]);
@@ -149,13 +153,13 @@ function assoc_unset(&$a,$keys) {
 
 
 // // // // // // // // // // // // // //
-// // BEGIN:ARRAY_UTILS
+// // BEGIN:STRING_UTILS
 
 /**
- * Get the commom start-string of two or more strings.  
+ * Get the commom start-string of two or more strings.
  * The algorithm splits the string by its differences.
  * @version 1.1 of 2015-06-04
- * @param $a mix, string for final operation, or array iteration. 
+ * @param $a mix, string for final operation, or array iteration.
  * @param $b string with probable commom root, or integer for array index.
  * @return string $root.
  * @see this function can feed the root for str_splitByRoot() function.
@@ -169,10 +173,10 @@ function assoc_unset(&$a,$keys) {
  */
 function str_getRoot($a,$b='',$minLen=1,$retFamily=false) {
 	if (is_array($a)) { // $b is a seed.
-		if (is_integer($b)) 
+		if (is_integer($b))
 			$b = $a[$b];
         if (!$b && isset($a[0])) $b=$a[0];
-		$family = array();		
+		$family = array();
 		foreach ($a as $item) {
 			if (is_array($item)) die("array of array is invalid");
 			$r = str_getRoot($item,$b);
@@ -188,7 +192,7 @@ function str_getRoot($a,$b='',$minLen=1,$retFamily=false) {
 			return $b;
 	} else {  // $b is a root
 	    $rooLen = strspn($b ^ $a, "\0");
-	    return substr($a,0,$rooLen);		
+	    return substr($a,0,$rooLen);
 	}
 }
 
@@ -210,5 +214,3 @@ function  str_splitByRoot($str, $root, $retSep='') {
 
 // // END:STRING_UTILS
 // // // // // // // // // // // // //
-
-
