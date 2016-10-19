@@ -1,3 +1,9 @@
+---
+title: XML-JSON convertion, tests and demo
+version: 1.1
+layout: page
+---
+
 <?php
 /**
  * Test and demo for simpleXml2JsonML() function.
@@ -17,74 +23,87 @@ $xml = '
 $xmlTestFile = dirname(__DIR__).'/test/test.xml'; // from http://www.lexml.gov.br/vocabulario/tipoConteudo.rdf.xml
 ?>
 
-v1.1 tests and demo
-string XML = <?=$xml?>
+# Demo Inputs
+string XML =
+```xml<?=$xml?>
+```
+file = [test.xml](test.xml)
 
-== Use jsonML conventions and return JSON  ==
+# Use jsonML conventions and return JSON  #
 
-=== XML from string ===
+### XML from string ###
 $j = xml2json($xml,false);
+```json
 <?php
-echo $xml;
   $j = xml2json($xml,false);
-  echo $j;
+  echo $j.PHP_EOL;
 ?>
-
-=== XML from string in a XPath===
+```
+### XML from string in a XPath ###
 $j = xpath2jsonML($xml,'//state',false);
+```json
 <?php
   $j = xpath2jsonML($xml,'//state',false);
-  echo $j;
+  echo $j.PHP_EOL;
 ?>
+```
 
-
-=== XML from remote file (URL) ===
+### XML from remote file (URL) ###
 $j = xml2json($xmlTestFile,false);
+```json
+<?php
+  $j = xml2json($xmlTestFile,false);
+  echo $j.PHP_EOL;
+?>
+```
+
+### XML from local file ###
+$j = xml2json($xmlTestFile,false);
+```json
 <?php
   $j = xml2json($xmlTestFile,false);
   echo $j;
 ?>
+```
 
+# Use jsonML conventions and return PHP-array #
 
-=== XML from local file ===
-$j = xml2json($xmlTestFile,false);
-<?php
-  $j = xml2json($xmlTestFile,false);
-  echo $j;
-?>
-
-== Use jsonML conventions and return PHP-array  ==
-
-=== XML from string ===
+### XML from string ###
 $a = xml2json($xml);
+```php
 <?php
   $a = xml2json($xml);
   var_dump($a);
 ?>
+```
 
-=== XML from DOM ===
+### XML from DOM ###
 $dom = DOMDocument::loadXML($xml);
 $a = xml2json($dom); echo "Ok, see root: $a[0].";
+```
 <?php
   $dom = DOMDocument::loadXML($xml);
   $a = xml2json($dom); echo "Ok! see root: $a[0].";
 ?>
+```
 
-
-=== XML from string and traverse ===
+### XML from string and traverse ###
 $a = xml2json($xml); foreach($a['states'] as $r) var_dump($r);
+```
 <?php
   echo "\ntag-root=$a[0]\n";
   foreach($a as $r)
     var_dump($r);
 ?>
+```
 
+# Use jsonML conventions and return PHP-array with objects #
 
-== Use jsonML conventions and return PHP-array with objects  ==
-
-=== XML from string ===
+### XML from string ###
 $a = xml2json($xml,true,true,false);
+```
 <?php
   $a = xml2json($xml,true,true,false);
   var_dump($a);
 ?>
+```
