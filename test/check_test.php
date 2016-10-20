@@ -23,11 +23,12 @@ layout: page
 Demo for basic [check](src/check.php) functions, see [its generator](test/check_test.php).
 
 # Demo Inputs
+```php
 $xmlFrag = '<?php echo $xmlFrag; ?>';
 $filename_long // this local file
 $filename_short = '<?php echo $filename_short; ?>';
 $xmlComplete = file_get_contents('test.xml');
-
+```
 
 # Checks  #
 
