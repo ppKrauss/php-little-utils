@@ -1,19 +1,9 @@
+# documentor files and folders
+docs/*
+!docs/files/
+
+# comment and copy files and folders
 _lixo/
 *~
 notas_tmp.txt
 notas_tmp.sql
-docs/.htaccess
-docs/css/
-docs/font/
-docs/graphs/
-docs/images/
-docs/index.html
-docs/js/
-docs/namespaces/
-docs/phpdoc-cache-2e/
-docs/phpdoc-cache-6c/
-docs/phpdoc-cache-ab/
-docs/phpdoc-cache-ed/
-docs/phpdoc-cache-f8/
-docs/phpdoc-cache-f9/
-docs/reports/
