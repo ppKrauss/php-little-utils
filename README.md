@@ -1,5 +1,5 @@
 # php-little-utils
-A curated set of small and util (frequent use) functions. Organizeting by "blocks" for test kits.
+A curated set of small and util (frequent use) functions. Organizing by "blocks" for test kits.
 
 ## basic checks
 Functions `is_cli`, `isFile`, ...See [GUIDE](test/xml2json_test.php) and [source](src/xml2json.php).
