@@ -7,11 +7,12 @@ layout: page
 Demo for basic [check](src/check.php) functions, see [its generator](test/check_test.php).
 
 # Demo Inputs
+```php
 $xmlFrag = 'this/is/a/XML/fragment <b>ok</b>';
 $filename_long // this local file
 $filename_short = 'hello.txt';
 $xmlComplete = file_get_contents('test.xml');
-
+```
 
 # Checks  #
 
