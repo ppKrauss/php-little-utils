@@ -8,8 +8,9 @@ See [GUIDE](xml2json.md), [source](src/xml2json.php) and [guide source](test/xml
 Use universal [jsonML](http://json.org/) or specific [SimpleXML](http://php.net/manual/en/book.simplexml.php) conventions, to convert XML to JSON.
 
 ### Basic checks
+
 Functions [`is_cli`](http://ppkrauss.github.io/php-little-utils/docs/#method_is_cli), [`isFile`](http://ppkrauss.github.io/php-little-utils/docs/#method_isFile), ...
-See [GUIDE](basiChecks.md), [source](src/basiChecks.php) and [guide source](test/basiChecks_test.php).
+See [GUIDE](check.md), [source](src/check.php) and [guide source](test/check_test.php).
 
 ### Dual getopt
 Functions `getopt_std`, ...

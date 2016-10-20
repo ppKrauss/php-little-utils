@@ -1,13 +1,15 @@
 <?php
 /**
- * Test and demo for simpleXml2JsonML() function.
- * USE: php tests.php |more
+ * Test and demo for xml2json() functions. Generates xml2json.md guide.
+ *
+ * @example php test/xml2json_test.php | more
+ * @example php test/xml2json_test.php | diff xml2json.md -
  */
 
 include dirname(__DIR__).'/src/basiChecks.php';
 include dirname(__DIR__).'/src/xml2json.php';
 
-if ( is_cli() ) header('Content-Type:text/plain');
+if ( !is_cli() ) header('Content-Type:text/plain');
 $xml = '
 	<states x="1">
 	    <state y="123">Alabama</state>
