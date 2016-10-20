@@ -11,7 +11,7 @@ Functions `getopt_std`, ...
 Standard PHP's [getopt]() extended to optional (non-terminal accesswebpage.
 
 ## XML-JSON convertion
-Functions `xml2json`, `xml2dom`, `xpath2jsonML`.
+Functions [`xml2json`](http://ppkrauss.github.io/php-little-utils/docs/#method_xml2json), [`xml2dom`](http://ppkrauss.github.io/php-little-utils/docs/#method_xml2dom), [`xpath2jsonML`](http://ppkrauss.github.io/php-little-utils/docs/#method_xpath2jsonML).
 See [GUIDE](xml2json.md), [source](src/xml2json.php) and [guide source](test/xml2json_test.php).
 
 Use universal [jsonML](http://json.org/) or specific [SimpleXML](http://php.net/manual/en/book.simplexml.php) conventions, to convert XML to JSON.
