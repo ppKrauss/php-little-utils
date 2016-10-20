@@ -1,20 +1,24 @@
 <?php
-//
-// See https://github.com/ppKrauss/php-little-utils
-// MIT License Copyright (c) 2016 Peter Krauss
-// Dependence: isFile() at basiChecks.php
-//
+/**
+ * String functions.
+ * @see https://github.com/ppKrauss/php-little-utils
+ * @license MIT License Copyright (c) 2016 Peter Krauss
+ * @uses  isFile() at basiChecks.php
+ */
 
 /**
  * Get the commom start-string of two or more strings.
  * The algorithm splits the string by its differences.
  * @version 1.1 of 2015-06-04
- * @param $a mix, string for final operation, or array iteration.
- * @param $b string with probable commom root, or integer for array index.
- * @return string $root.
  * @see this function can feed the root for str_splitByRoot() function.
  *
- * USE CASE:
+ * @param $a mix, string for final operation, or array iteration.
+ * @param $b string with probable commom root, or integer for array index.
+ * @param $minLen integer minimal length.
+ * @param $retFamily boolean true for return family.
+ * @return string $root.
+ *
+ * @example
  *	$root=str_getRoot($DOIs,1,5);
  *	foreach ($DOIs as $doi) {
  *		$dif = str_splitByRoot($doi, $root, ' * ');

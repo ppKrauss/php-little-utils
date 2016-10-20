@@ -1,7 +1,8 @@
 <?php
 /**
- * Library of little and util functions.
- * See https://github.com/ppKrauss/php-little-utils
+ * Array functions.
+ * @see https://github.com/ppKrauss/php-little-utils
+ * @license MIT License Copyright (c) 2016 Peter Krauss
  */
 
 /**

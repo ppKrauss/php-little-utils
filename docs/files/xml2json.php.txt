@@ -1,10 +1,11 @@
 <?php
-//
-// See https://github.com/ppKrauss/php-little-utils
-// MIT License Copyright (c) 2016 Peter Krauss
-// Dependence: isFile() at basiChecks.php
-//
-
+/**
+ * XML-to-JSON functions.
+ * @see https://github.com/ppKrauss/php-little-utils
+ * @license MIT License Copyright (c) 2016 Peter Krauss
+ * @uses  isFile() at basiChecks.php
+ */
+ 
 /**
  * Converts XML file (or XML string or DOMDocument) to JSON or to PHP array.
  * Use direct SimpleXML-JSON convertion or jsonML (see https://github.com/mckamey/jsonml).

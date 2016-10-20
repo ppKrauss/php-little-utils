@@ -1,9 +1,10 @@
 <?php
 /**
- * Library of little and util functions.
- * See https://github.com/ppKrauss/php-little-utils
+ * Getopt functions.
+ * @see https://github.com/ppKrauss/php-little-utils
+ * @license MIT License Copyright (c) 2016 Peter Krauss
  */
-
+ 
 /**
  * Gets options from the Web ($_REQUEST) or terminal (command line argument list).
  * The terminal behaviour is similar to the standard getopt() function.

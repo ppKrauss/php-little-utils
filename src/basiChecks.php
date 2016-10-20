@@ -1,12 +1,15 @@
 <?php
-//
-// See https://github.com/ppKrauss/php-little-utils
-// MIT License Copyright (c) 2016 Peter Krauss
-//
+/**
+ * Basic checks functions.
+ * @see https://github.com/ppKrauss/php-little-utils
+ * @license MIT License Copyright (c) 2016 Peter Krauss
+ */
 
 /**
  * Check if is a filename string, not a XML/HTML/markup string.
- * @return boolean true when is filename or path string.
+ * @param $input string of filename or markup code.
+ * @param $flenLimit integer 0 or limit of filename length.
+ * @return boolean true when is filename or path string, false when markup.
  */
 function isFile($input,$flenLimit=1000) {
 	return strrpos($input,'<')==false && (!$flenLimit || strlen($input)<$flenLimit);
