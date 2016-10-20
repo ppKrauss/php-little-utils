@@ -4,6 +4,7 @@ version: 1.1
 layout: page
 ---
 
+Demo for [xml2json](src/xml2json.php) functions, see [its generator](test/xml2json_test.php).
 
 # Demo Inputs
 string XML =
@@ -30,10 +31,8 @@ $j = xpath2jsonML($xml,'//state',false);
 ```
 
 ### XML from remote file (URL) ###
-$j = xml2json($xmlTestFile,false);
-```json
-["rdf:RDF",{"xml:base":"http://www.lexml.gov.br/vocabulario/br/tipoConteudo#"},"\n",["skos:ConceptScheme",{"rdf:about":"tipoConteudo"},"\n",["dc:title","Vocabulário de tipo da expressão do Conteúdo"],"\n",["dc:description","Vocabulário de tipo da expressão do Conteúdo."]],"\n\n",["skos:Concept",{"rdf:about":"texto","rdf:id":"1"},"\n",["skos:prefLabel",{"xml:lang":"pt-BR"},"Texto"],"\n",["skos:inScheme",{"rdf:resource":"#tipoConteudo"}],"\n"],"\n\n",["skos:Concept",{"rdf:about":"imagem","rdf:id":"2"},"\n",["skos:prefLabel",{"xml:lang":"pt-BR"},"Imagem"],"\n",["skos:inScheme",{"rdf:resource":"#tipoConteudo"}],"\n"],"\n\n",["skos:Concept",{"rdf:about":"imagem.movimento","rdf:id":"3"},"\n",["skos:prefLabel",{"xml:lang":"pt-BR"},"Imagem em Movimento"],"\n",["skos:inScheme",{"rdf:resource":"#tipoConteudo"}],"\n"],"\n\n",["skos:Concept",{"rdf:about":"musica","rdf:id":"4"},"\n",["skos:prefLabel",{"xml:lang":"pt-BR"},"Música"],"\n",["skos:inScheme",{"rdf:resource":"#tipoConteudo"}],"\n"],"\n\n",["skos:Concept",{"rdf:about":"notacao.musical","rdf:id":"5"},"\n",["skos:prefLabel",{"xml:lang":"pt-BR"},"Notação Musical"],"\n",["skos:inScheme",{"rdf:resource":"#tipoConteudo"}],"\n"],"\n\n",["skos:Concept",{"rdf:about":"texto.falado","rdf:id":"6"},"\n",["skos:prefLabel",{"xml:lang":"pt-BR"},"Texto Falado"],"\n",["skos:inScheme",{"rdf:resource":"#tipoConteudo"}],"\n"],"\n"]
-```
+$j = xml2json($xmlTestUrl,false);
+
 
 ### XML from local file ###
 $j = xml2json($xmlTestFile,false);
@@ -45,54 +44,40 @@ $j = xml2json($xmlTestFile,false);
 ### XML from string ###
 $a = xml2json($xml);
 ```php
-array(9) {
-  [0]=>
-  string(6) "states"
-  [1]=>
-  array(1) {
-    ["x"]=>
-    string(1) "1"
-  }
-  [2]=>
-  string(6) "
-	    "
-  [3]=>
-  array(3) {
-    [0]=>
-    string(5) "state"
-    [1]=>
-    array(1) {
-      ["y"]=>
-      string(3) "123"
-    }
-    [2]=>
-    string(7) "Alabama"
-  }
-  [4]=>
-  string(15) "
-			My name is "
-  [5]=>
-  array(2) {
-    [0]=>
-    string(1) "b"
-    [1]=>
-    string(4) "John"
-  }
-  [6]=>
-  string(10) " Doe
-	    "
-  [7]=>
-  array(2) {
-    [0]=>
-    string(5) "state"
-    [1]=>
-    string(6) "Alaska"
-  }
-  [8]=>
-  string(2) "
-	"
-}
-```
+array (
+  0 => 'states',
+  1 => 
+  array (
+    'x' => '1',
+  ),
+  2 => '
+	    ',
+  3 => 
+  array (
+    0 => 'state',
+    1 => 
+    array (
+      'y' => '123',
+    ),
+    2 => 'Alabama',
+  ),
+  4 => '
+			My name is ',
+  5 => 
+  array (
+    0 => 'b',
+    1 => 'John',
+  ),
+  6 => ' Doe
+	    ',
+  7 => 
+  array (
+    0 => 'state',
+    1 => 'Alaska',
+  ),
+  8 => '
+	',
+)```
 
 ### XML from DOM ###
 $dom = DOMDocument::loadXML($xml);

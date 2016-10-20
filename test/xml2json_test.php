@@ -1,18 +1,13 @@
----
-title: XML-JSON convertion, tests and demo
-version: 1.1
-layout: page
----
-
 <?php
 /**
  * Test and demo for simpleXml2JsonML() function.
  * USE: php tests.php |more
  */
 
-include dirname(__DIR__).'/src/simpleXml2JsonML.php';
+include dirname(__DIR__).'/src/basiChecks.php';
+include dirname(__DIR__).'/src/xml2json.php';
 
-if ( php_sapi_name() != 'cli' ) header('Content-Type:text/plain');
+if ( is_cli() ) header('Content-Type:text/plain');
 $xml = '
 	<states x="1">
 	    <state y="123">Alabama</state>
@@ -22,6 +17,13 @@ $xml = '
 ';
 $xmlTestFile = dirname(__DIR__).'/test/test.xml'; // from http://www.lexml.gov.br/vocabulario/tipoConteudo.rdf.xml
 ?>
+---
+title: XML-JSON convertion, tests and demo
+version: 1.1
+layout: page
+---
+
+Demo for [xml2json](src/xml2json.php) functions, see [its generator](test/xml2json_test.php).
 
 # Demo Inputs
 string XML =
@@ -49,13 +51,8 @@ $j = xpath2jsonML($xml,'//state',false);
 ```
 
 ### XML from remote file (URL) ###
-$j = xml2json($xmlTestFile,false);
-```json
-<?php
-  $j = xml2json($xmlTestFile,false);
-  echo $j.PHP_EOL;
-?>
-```
+$j = xml2json($xmlTestUrl,false);
+
 
 ### XML from local file ###
 $j = xml2json($xmlTestFile,false);
@@ -73,7 +70,7 @@ $a = xml2json($xml);
 ```php
 <?php
   $a = xml2json($xml);
-  var_dump($a);
+  var_export($a);
 ?>
 ```
 

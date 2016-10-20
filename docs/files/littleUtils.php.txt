@@ -9,16 +9,6 @@
  // // BEGIN:Terminal-Web
 
 /**
- * Check if is terminal or not.
- * @return boolean true when is client (terminal).
- */
-function is_cli() {
-  return (php_sapi_name() === 'cli'); // && empty($_SERVER['REMOTE_ADDR']
-  //return ( empty($_SERVER['REMOTE_ADDR']) && !isset($_SERVER['HTTP_USER_AGENT']) && count($_SERVER['argv'])>0)
-}
-
-
-/**
  * Gets options from the Web ($_REQUEST) or terminal (command line argument list).
  * The terminal behaviour is similar to the standard getopt() function.
  * Conventions: only long and required options, "--opt=val", are allowed, and only "-h" short-option is offered.
@@ -214,3 +204,4 @@ function  str_splitByRoot($str, $root, $retSep='') {
 
 // // END:STRING_UTILS
 // // // // // // // // // // // // //
+

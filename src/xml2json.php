@@ -1,0 +1,91 @@
+<?php
+//
+// See https://github.com/ppKrauss/php-little-utils
+// MIT License Copyright (c) 2016 Peter Krauss
+// Dependence: isFile() at basiChecks.php
+//
+
+/**
+ * Converts XML file (or XML string or DOMDocument) to JSON or to PHP array.
+ * Use direct SimpleXML-JSON convertion or jsonML (see https://github.com/mckamey/jsonml).
+ * @param $input string of filename or string of full XML or DOMDocument instance.
+ * @param $out_php boolean true if whant PHP output, else will be JSON.
+ * @param $out_jsonml boolean true if whant jsonML as outputformat, else will be SimpleXML-JSON.
+ * @param $out_array boolean true if whant pure PHP array as output, else will be array with objects.
+ * @param $flenLimit integer 0 or size limit for filename, only for safe.
+ * @return JSON string or array of XML mapped data.
+ *
+ * NOTE: for other xml-json map strategies, see https://github.com/bramstein/xsltjson
+ * FUTURE function dom2json() can be used with XPath to select specific node or array of nodes.
+ */
+function xml2json($input,$out_php=true,$out_jsonml=true,$out_array=true,$flenLimit=1000) {
+	static $xslDoc=NULL; // cache
+	static $proc=NULL;   // cache
+
+	$isFile = $isDom = false;
+	$opts = LIBXML_NOCDATA |LIBXML_NOENT;
+	$isObj = is_object($input);
+
+	if ($isObj && $input instanceof DOMNodeList) {
+		$jlist = '';
+		$dom = DOMDocument::loadXML('<_DOMNodeList/>');
+		foreach ($input as $domNode)
+			$dom->documentElement->appendChild( $dom->importNode($domNode, true) );
+		$isDom = $isObj = true;
+		$input = $dom;
+	} elseif ($isObj)
+		$isDom = $input instanceof DOMDocument;
+	else
+		$isFile = isFile($input,$flenLimit);
+
+	if ($out_jsonml) {
+		//ops if (!$isDom) die("\nERROR: no SimpleXMLElement to DOMDocument enabled.\n");
+		if ($xslDoc==NULL) { // build the XSLT parser
+			$xslDoc = new DOMDocument();
+			$xslDoc->load(__DIR__.'/jsonml.xslt'); // at mckamey/jsonml git
+			$proc = new XSLTProcessor();
+			$proc->importStylesheet($xslDoc);
+		}
+		$ret = $proc->transformToXML($isDom? $input:
+			($isFile? DOMDocument::load($input,$opts) : DOMDocument::loadXML($input,$opts))
+		);
+	} else
+		$ret = json_encode(
+			$isObj? ($isDom? simplexml_import_dom($input): $input)
+			: ($isFile?
+				simplexml_load_file($input,'SimpleXMLElement',$opts):
+				simplexml_load_string($input,'SimpleXMLElement',$opts)
+			)
+		);
+	return $out_php? json_decode($ret,$out_array): $ret;
+}
+
+function xml2dom($input,$flenLimit=1000,$opts = LIBXML_NOCDATA |LIBXML_NOENT) {
+	$isObj = is_object($input);
+	$isDom = false;
+	if ($isObj) {
+		$isDom = $input instanceof DOMDocument;
+		return $input;
+	} else
+		return isFile($input,$flenLimit)?
+			DOMDocument::load($input,$opts) :
+			DOMDocument::loadXML($input,$opts);
+}
+
+/**
+ * Converts DOMNodeList resulted of a XPath query,
+ * into JSON or into PHP array.
+ * Use direct jsonML as json-map (see https://github.com/mckamey/jsonml).
+ * @param $input string of filename or string of full XML or DOMDocument instance.
+ * @param $xpquery string XPath expression.
+ * @param $out_php boolean true if whant PHP output, else will be JSON.
+ * @param $out_array boolean true if whant pure PHP array as output, else will be array with objects.
+ * @return JSON string or array of XML mapped data.
+ */
+function xpath2jsonML($input,$xpquery='',$out_php=true,$out_array=true) {
+	if (!$xpquery) return xml2json($input,$out_php,true,$out_array); // bypass
+	$dom = xml2dom($input);
+	$xpath = new DOMXPath($dom);
+	$entries = $xpath->query($xpquery); // DOMNodeList, nodeValue
+	return xml2json($entries,$out_php,true,$out_array);
+}

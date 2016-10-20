@@ -1,7 +1,9 @@
 <?php
-
-// See https://github.com/ppKrauss/simpleXml2JsonML
-// MIT License Copyright (c) 2016 Peter Krauss 
+//
+// See https://github.com/ppKrauss/php-little-utils
+// MIT License Copyright (c) 2016 Peter Krauss
+// Dependence: isFile() at basiChecks.php
+//
 
 /**
  * Converts XML file (or XML string or DOMDocument) to JSON or to PHP array.
@@ -70,10 +72,6 @@ function xml2dom($input,$flenLimit=1000,$opts = LIBXML_NOCDATA |LIBXML_NOENT) {
 			DOMDocument::loadXML($input,$opts);
 }
 
-function isFile($input,$flenLimit=1000) {
-	return strrpos($input,'<')==false && (!$flenLimit || strlen($input)<$flenLimit);
-}
-
 /**
  * Converts DOMNodeList resulted of a XPath query,
  * into JSON or into PHP array.
@@ -91,3 +89,4 @@ function xpath2jsonML($input,$xpquery='',$out_php=true,$out_array=true) {
 	$entries = $xpath->query($xpquery); // DOMNodeList, nodeValue
 	return xml2json($entries,$out_php,true,$out_array);
 }
+
