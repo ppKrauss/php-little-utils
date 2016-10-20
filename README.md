@@ -13,17 +13,23 @@ Functions [`is_cli`](http://ppkrauss.github.io/php-little-utils/docs/#method_is_
 See [GUIDE](check.md), [source](src/check.php) and [guide source](test/check_test.php).
 
 ### Dual getopt
-Functions `getopt_std`, ...
+Functions [`getopt_std`](http://ppkrauss.github.io/php-little-utils/docs/#method_getopt_std), ...
 
-Standard PHP's [getopt]() extended to optional (non-terminal accesswebpage.
+Getopt terminal+web. An extension, to optional webpage HTTP input options, of the native PHP [`getopt()`](http://php.net/manual/en/function.getopt.php).
 
 ### Associative array
 
-Functions `file_csv`, `assoc_join`, `assoc_merge`, `assoc_rename`, `assoc_unset`,
+Functions [`file_csv`](http://ppkrauss.github.io/php-little-utils/docs/#method_file_csv), 
+[`assoc_join`](http://ppkrauss.github.io/php-little-utils/docs/#method_assoc_join), 
+[`assoc_merge`](http://ppkrauss.github.io/php-little-utils/docs/#method_assoc_merge), 
+[`assoc_rename`](http://ppkrauss.github.io/php-little-utils/docs/#method_assoc_rename), 
+[`assoc_unset`](http://ppkrauss.github.io/php-little-utils/docs/#method_assoc_unset).
 
 ### String
 
-Functions `str_getRoot`,  `str_splitByRoot`
+Functions
+[`str_getRoot`](http://ppkrauss.github.io/php-little-utils/docs/#method_str_getRoot), 
+[`str_splitByRoot`](http://ppkrauss.github.io/php-little-utils/docs/#method_str_splitByRoot).
 
 ------
 
