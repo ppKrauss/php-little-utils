@@ -92,3 +92,18 @@ function assoc_unset(&$a,$keys) {
 			unset($a[$key]);
 	}
 }
+
+/**
+ * Get only specified key of an array of associative arrays.
+ * @param $key string with the key.
+ * @param $a array to be scanned.
+ * @param $ignoreNulls boolean true for ignore nulls, falses and empties.
+ * Hum... there are a native PHP funcion to do it?? reduce? map?
+ */
+function array_ofKey($key,$a,$ignoreNulls=true) {
+  $r = [];
+  foreach ($a as $x)
+		if ( array_key_exists($key,$x)  &&  (!$ignoreNulls || $x[$key]) )
+			$r[]=$x[$key];
+  return $r;
+}
