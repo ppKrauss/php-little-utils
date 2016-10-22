@@ -6,13 +6,14 @@
  */
 
 /**
- * Check if is a filename string, not a XML/HTML/markup string.
+ * Check if is a filename string, not a CSV/XML/HTML/markup string.
  * @param $input string of filename or markup code.
  * @param $flenLimit integer 0 or limit of filename length.
+ * @param $keyStr string '<' for XML, "\n" for CSV.
  * @return boolean true when is filename or path string, false when markup.
  */
-function isFile($input,$flenLimit=1000) {
-	return strrpos($input,'<')==false && (!$flenLimit || strlen($input)<$flenLimit);
+function isFile($input,$flenLimit=600,$keyStr='<') {
+	return strrpos($input,$keyStr)==false && (!$flenLimit || strlen($input)<$flenLimit);
 }
 
 /**
