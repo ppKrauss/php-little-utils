@@ -27,6 +27,7 @@ layout: page
 
 Demo for [xml2json](src/xml2json.php) functions, see [its generator](test/xml2json_test.php).
 
+
 # Demo Inputs
 string XML =
 ```xml<?=$xml?>
@@ -34,6 +35,8 @@ string XML =
 file = [test.xml](test.xml)
 
 # Use jsonML conventions and return JSON  #
+Converts XML file (or XML string or DOMDocument) to JSON or to PHP array.
+Use **[jsonML](https://github.com/mckamey/jsonml) convertion**.
 
 ### XML from string ###
 $j = xml2json($xml,false);
