@@ -6,7 +6,7 @@
  * @example php test/xml2json_test.php | diff xml2json.md -
  */
 
-include dirname(__DIR__).'/src/basiChecks.php';
+include dirname(__DIR__).'/src/checks.php';
 include dirname(__DIR__).'/src/xml2json.php';
 
 if ( !is_cli() ) header('Content-Type:text/plain');
