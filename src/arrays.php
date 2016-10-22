@@ -2,8 +2,53 @@
 /**
  * Array functions.
  * @see https://github.com/ppKrauss/php-little-utils
+ * @use check.php
  * @license MIT License Copyright (c) 2016 Peter Krauss
  */
+
+
+/**
+ * Standard "get array from CSV", file or CSV-string.
+ * CSV conventions by default options of the build-in str_getcsv() function.
+ * @param $f string file (.csv) with path or CSV string (with more tham 1 line).
+ * @param $flenLimit integer 0 or limit of filename length (as in isFile function).
+ * @return array of arrays.
+ * @use isFile() at check.php
+ */
+function getCsv($f,$flenLimit=600) {
+	return array_map(
+		'str_getcsv', 
+		isFile($f,$flenLimit,"\n")? file($f): explode($f,"\n") 
+	);
+}
+ 
+
+/**
+ * Get data (array of associative arrays) from CSV file, only the listed keys.
+ * @param $f string file (.csv) with path or CSV string (with more tham 1 line). 
+ * @param $flist array of column names, or NULL for "all columns".
+ * @param $outJSON boolean true for JSON output. 
+ * @param $flenLimit integer 0 or limit of filename length (as in isFile function).
+ * @return mix JSON or array of associative arrays.
+ */
+function getCsvFields($f,$flist=NULL,$outJSON=false,$flenLimit=600) {
+	$t = getCsv($f,$flenLimit);
+	$thead = array_shift($t);
+
+	$r = [];
+	foreach($t as $x) {
+		$a = array_combine($thead,$x);
+		if ($flist===NULL)
+			$r[] = $a;
+		elseif (isset($a[$flist[0]])) {  // ~ array_column()
+			$tmp = [];  // NEED OPTIMIZE WITH array_intersection!
+			foreach ($flist as $g) $tmp[$g] = $a[$g];
+			$r[] = $tmp;
+		}
+	}
+	return $outJSON? json_encode($r): $r;
+}
+
 
 /**
  * Reads entire CSV file into an array (or associative array or pair of header-content arrays).
