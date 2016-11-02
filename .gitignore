@@ -1,6 +1,7 @@
 # documentor files and folders
 docs/*
 !docs/files/
+Doxyfile
 
 # comment and copy files and folders
 _lixo/
