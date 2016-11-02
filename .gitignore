@@ -1,7 +1,7 @@
 # documentor files and folders
 docs/*
-!docs/files/
-Doxyfile
+!docs/html_phpdoc
+!docs/html
 
 # comment and copy files and folders
 _lixo/
