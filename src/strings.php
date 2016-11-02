@@ -78,8 +78,17 @@ function  str_splitByRoot($str, $root, $retSep='') {
 
 
 /// pt_BR
-function format_nomePtBR($val) { return format_name_PtBR($val);} // old function
-function format_name_PtBR($val) {
+/**
+ * Wrap for format_name_ptBr().
+ * @param $val string name.
+ */
+function format_nomePtBR($val) { return format_name_ptBr($val);} // old function
+
+/**
+ * normalize pt-BR proper (people) names.
+ * @param $val string name.
+ */
+function format_name_ptBr($val) {
   // $curloc = setlocale(LC_ALL, 0);
   // nem assim! if (substr($curloc,0,20)!='LC_CTYPE=pt_BR.UTF-8') die("\nERRO323: Brazil requer LC_CTYPE=pt_BR.UTF-8!!");
   $minuscular = [

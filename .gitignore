@@ -1,6 +1,7 @@
 # documentor files and folders
 docs/*
-!docs/html_phpdoc
+!docs/html_phpdoc/files/
+!docs/html_phpdoc/index.htm
 !docs/html
 
 # comment and copy files and folders
