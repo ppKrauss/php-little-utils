@@ -50,3 +50,11 @@ To [*assert*](https://en.wikipedia.org/wiki/Assertion_(software_development)) bl
 
  * to assert *check* functions: `php test/check_test.php | diff check.md -`
  * to assert *XML-to-JSON* functions: `php test/xml2json_test.php | diff xml2json.md -`
+
+# Docs generation
+
+Note: testing [Doxygen-docs](http://ppkrauss.github.io/php-little-utils/docs/html/files.html) and [PHPdocs](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/index.html).
+
+Use ``doxywizard Doxyfile` to Doxygen docs, and `phpdoc run -d  src -t docs/html_phpdoc`.
+
+
