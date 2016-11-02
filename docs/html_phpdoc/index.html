@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet" media="all"/>
+    <link href="css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smooth-scroll.js"></script>
+    <script src="js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">6</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                <a href="namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-459468497" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content namespace">
+                    <nav>
+                                                
+                                            </nav>
+                    <h1><small></small>\</h1>
+
+                    
+                    
+                    
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                        <dt>Namespace hierarchy</dt>
+                        <dd class="hierarchy">
+                                                                                                                                                <div class="namespace-wrapper">\</div>
+                        </dd>
+                    </dl>
+                </aside>
+            </div>
+
+            
+                        <div class="row-fluid">
+                <section class="span8 content namespace">
+                    <h2>Functions</h2>
+                </section>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_array_ofKey" name="method_array_ofKey" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">array_ofKey()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">array_ofKey(  <span class="argument">$key</span>,   <span class="argument">$a</span>,   <span class="argument">$ignoreNulls = true</span>) </pre>
+                <p><em>Get only specified key of an array of associative arrays.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$key </td>
+                                <td><p>string with the key.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$a </td>
+                                <td><p>array to be scanned.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$ignoreNulls </td>
+                                <td><p>boolean true for ignore nulls, falses and empties.
+Hum... there are a native PHP funcion to do it?? reduce? map?</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_assoc_join" name="method_assoc_join" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">assoc_join()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">assoc_join(  <span class="argument">$a</span>,   <span class="argument">$sep = &#039;; &#039;</span>,   <span class="argument">$pairSep = &#039;=&#039;</span>) : \mix</pre>
+                <p><em>Joins a set of key-value pairs by $pairSep, and all pairs of the set by $sep.</em></p>
+                <p>NOTE: assoc_join($a,'&amp;') is similar to http_build_query($a).</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$a </td>
+                                <td><p>mix NULL or array (handdled as reference) to be joined.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$sep </td>
+                                <td><p>string (default '; ') separator in the final string.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$pairSep </td>
+                                <td><p>string (default '=') pair separator (joins key-val pair).</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \mix
+                                            &mdash; <p>NULL if $a is NULL, string if $a is array.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_assoc_merge" name="method_assoc_merge" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">assoc_merge()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">assoc_merge(  <span class="argument">$a</span>,   <span class="argument">$append</span>) </pre>
+                <p><em>Replaces or appends array. On key-conflicts, use the appended values.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$a </td>
+                                <td><p>mix NULL or array (handdled as reference) to be changed.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$append </td>
+                                <td><p>mix, string in the form &quot;key=value&quot;, or associative array.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_assoc_rename" name="method_assoc_rename" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">assoc_rename()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">assoc_rename(  <span class="argument">$a</span>,   <span class="argument">$rename</span>,   <span class="argument">$renameOverride = true</span>) </pre>
+                <p><em>Rename keys of an associative array. On key-conflicts, use the flag to decide.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$a </td>
+                                <td><p>mix NULL or array (handdled as reference) to be changed.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$rename </td>
+                                <td><p>associative array with the pairs oldKey-newKey.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$renameOverride </td>
+                                <td><p>boolean (default true) to decide override on conflicts with new keys.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_assoc_unset" name="method_assoc_unset" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">assoc_unset()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">assoc_unset(  <span class="argument">$a</span>,   <span class="argument">$keys</span>) </pre>
+                <p><em>Removes key-value pairs from array, by keys.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$a </td>
+                                <td><p>mix NULL or array (handdled as reference) to be changed.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$keys </td>
+                                <td><p>mix, string with the key, or array of keys.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_autolink" name="method_autolink" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">autolink()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">autolink(  <span class="argument">$text</span>,   <span class="argument">$limit = 30</span>,   <span class="argument">$tagfill = &#039;&#039;</span>,   <span class="argument">$auto_title = true</span>) : string</pre>
+                <p><em>Find URLs in HTML that are not already links, and make them into links.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$text </td>
+                                <td><p>string the input TXT, without links.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$limit </td>
+                                <td><p>integer maximum strlen for label.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$tagfill </td>
+                                <td><p>string extra attributes for anchor tag A.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$auto_title </td>
+                                <td><p>boolean ??</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>HTML with possible links.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            license
+                        </th>
+                        <td>
+                                                                                            <p>MIT License Copyright (c) 2015 Cal Henderson</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_autolink_do" name="method_autolink_do" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">autolink_do()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">autolink_do(  <span class="argument">$text</span>,   <span class="argument">$sub</span>,   <span class="argument">$limit</span>,   <span class="argument">$tagfill</span>,   <span class="argument">$auto_title</span>,   <span class="argument">$force_prefix = null</span>) : string</pre>
+                <p><em>Auxiliar to autolink().</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$text </td>
+                                <td><p>string the input TXT, without links.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$sub </td>
+                                <td><p>??</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$limit </td>
+                                <td><p>integer maximum strlen for label.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$tagfill </td>
+                                <td><p>string extra attributes for anchor tag A.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$auto_title </td>
+                                <td><p>boolean ??</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$force_prefix </td>
+                                <td><p>array ??</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>HTML with possible links.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            license
+                        </th>
+                        <td>
+                                                                                            <p>MIT License Copyright (c) 2015 Cal Henderson</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_autolink_email" name="method_autolink_email" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">autolink_email()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">autolink_email(  <span class="argument">$text</span>,   <span class="argument">$tagfill = &#039;&#039;</span>) : string</pre>
+                <p><em>Auxiliar to autolink().</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$text </td>
+                                <td><p>string the input TXT, without links.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$tagfill </td>
+                                <td><p>string extra attributes for anchor tag A.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>HTML with possible e-mail link.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            license
+                        </th>
+                        <td>
+                                                                                            <p>MIT License Copyright (c) 2015 Cal Henderson</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_autolink_label" name="method_autolink_label" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">autolink_label()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">autolink_label(  <span class="argument">$text</span>,   <span class="argument">$limit</span>) : string</pre>
+                <p><em>Auxiliar to autolink().</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$text </td>
+                                <td><p>string label.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$limit </td>
+                                <td><p>integer maximum strlen for label.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>label with &quot;...&quot; after limit-3.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            license
+                        </th>
+                        <td>
+                                                                                            <p>MIT License Copyright (c) 2015 Cal Henderson</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_file_csv" name="method_file_csv" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">file_csv()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">file_csv(  <span class="argument">$file</span>,   <span class="argument">$opt = array()</span>,   <span class="argument">$length</span>,   <span class="argument">$context = NULL</span>) : array</pre>
+                <p><em>Reads entire CSV file into an array (or associative array or pair of header-content arrays).</em></p>
+                <p>Like build-in file() function, but to CSV handling.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$file </td>
+                                <td><p>string filename.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$opt </td>
+                                <td><p>not-null (can be empty) associative array of options (sep,enclosure,escape,head,assoc,limit)</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$length </td>
+                                <td><p>integer same as in fgetcsv().</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$context </td>
+                                <td><p>resource same as in fopen().</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>(as head and assoc options).</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_format_name_ptBr" name="method_format_name_ptBr" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">format_name_ptBr()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">format_name_ptBr(  <span class="argument">$val</span>) </pre>
+                <p><em>normalize pt-BR proper (people) names.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$val </td>
+                                <td><p>string name.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_format_nomePtBR" name="method_format_nomePtBR" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">format_nomePtBR()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">format_nomePtBR(  <span class="argument">$val</span>) </pre>
+                <p><em>Wrap for format_name_ptBr().</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$val </td>
+                                <td><p>string name.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCsv" name="method_getCsv" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">getCsv()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCsv(  <span class="argument">$f</span>,   <span class="argument">$flenLimit = 600</span>) : array</pre>
+                <p><em>Standard &quot;get array from CSV&quot;, file or CSV-string.</em></p>
+                <p>CSV conventions by default options of the build-in str_getcsv() function.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$f </td>
+                                <td><p>string file (.csv) with path or CSV string (with more tham 1 line).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$flenLimit </td>
+                                <td><p>integer 0 or limit of filename length (as in isFile function).</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>of arrays.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            use
+                        </th>
+                        <td>
+                                                                                            <p>isFile() at check.php</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getCsvFields" name="method_getCsvFields" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">getCsvFields()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getCsvFields(  <span class="argument">$f</span>,   <span class="argument">$flist = NULL</span>,   <span class="argument">$outJSON = false</span>,   <span class="argument">$flenLimit = 600</span>) : \mix</pre>
+                <p><em>Get data (array of associative arrays) from CSV file, only the listed keys.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$f </td>
+                                <td><p>string file (.csv) with path or CSV string (with more tham 1 line).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$flist </td>
+                                <td><p>array of column names, or NULL for &quot;all columns&quot;.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$outJSON </td>
+                                <td><p>boolean true for JSON output.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$flenLimit </td>
+                                <td><p>integer 0 or limit of filename length (as in isFile function).</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \mix
+                                            &mdash; <p>JSON or array of associative arrays.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getopt_std" name="method_getopt_std" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">getopt_std()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getopt_std(  <span class="argument">$opts = NULL</span>,   <span class="argument">$is_cli = NULL</span>,   <span class="argument">$req_header = &#039;&#039;</span>,   <span class="argument">$h = &#039;cmd&#039;</span>,   <span class="argument">$globalize = true</span>) : array</pre>
+                <p><em>Gets options from the Web ($_REQUEST) or terminal (command line argument list).</em></p>
+                <p>The terminal behaviour is similar to the standard getopt() function.
+Conventions: only long and required options, &quot;--opt=val&quot;, are allowed, and only &quot;-h&quot; short-option is offered.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$opts </td>
+                                <td><p>associative array with the 'name'/default pairs.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$is_cli </td>
+                                <td><p>when not null reuses the is_cli() flag.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$req_header </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$h </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$globalize </td>
+                                <td><p>boolean (true) to change globalizing behaviour.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                            &mdash; <p>and (optional) globalized variables.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            para
+                        </th>
+                        <td>
+                                                                                            <p>$h help command convention.  'cmd' (default to be 'help') or '' to ignore.</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_is_cli" name="method_is_cli" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">is_cli()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">is_cli() : boolean</pre>
+                <p><em>Check if is terminal or not.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true when is client (terminal).</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isFile" name="method_isFile" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">isFile()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isFile(  <span class="argument">$input</span>,   <span class="argument">$flenLimit = 600</span>,   <span class="argument">$keyStr = &#039;&lt;&#039;</span>) : boolean</pre>
+                <p><em>Check if is a filename string, not a CSV/XML/HTML/markup string.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$input </td>
+                                <td><p>string of filename or markup code.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$flenLimit </td>
+                                <td><p>integer 0 or limit of filename length.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$keyStr </td>
+                                <td><p>string '&lt;' for XML, &quot;\n&quot; for CSV.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>true when is filename or path string, false when markup.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_str_getRoot" name="method_str_getRoot" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">str_getRoot()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">str_getRoot(  <span class="argument">$a</span>,   <span class="argument">$b = &#039;&#039;</span>,   <span class="argument">$minLen = 1</span>,   <span class="argument">$retFamily = false</span>) : string</pre>
+                <p><em>Get the commom start-string of two or more strings.</em></p>
+                <p>The algorithm splits the string by its differences.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$a </td>
+                                <td><p>mix, string for final operation, or array iteration.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$b </td>
+                                <td><p>string with probable commom root, or integer for array index.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$minLen </td>
+                                <td><p>integer minimal length.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$retFamily </td>
+                                <td><p>boolean true for return family.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                            &mdash; <p>$root.</p>
+                                    				
+                                                            <h4>Examples</h4>
+                                                                <h5>foreach ($DOIs as $doi) {
+	$dif = str_splitByRoot($doi, $root, &#039; * &#039;);
+	print &quot;\n-- $doi \t= $dif&quot;;
+}</h5>
+                        <pre class="pre-scrollable">** File not found : $root=str_getRoot($DOIs,1,5); **</pre>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">function can feed the root for str_splitByRoot() function.</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            version
+                        </th>
+                        <td>
+                                                            1.1                                <p>of 2015-06-04</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            license
+                        </th>
+                        <td>
+                                                                                            <p>MIT License Copyright (c) 2016 Peter Krauss</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_str_splitByRoot" name="method_str_splitByRoot" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">str_splitByRoot()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">str_splitByRoot(  <span class="argument">$str</span>,   <span class="argument">$root</span>,   <span class="argument">$retSep = &#039;&#039;</span>) : \mix</pre>
+                <p><em>Splits a string by its root and sufix.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$str </td>
+                                <td><p>string input.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$root </td>
+                                <td><p>prefix string (can be empty or NULL as no-root).</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$retSep </td>
+                                <td><p>non-empty for string return.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \mix
+                                            &mdash; <p>array(rootFlag,suffix) or string.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href="http://codereview.stackexchange.com/q/92601/24276"><span class="namespace-wrapper">http://codereview.stackexchange.com/q/92601/24276</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            license
+                        </th>
+                        <td>
+                                                                                            <p>MIT License Copyright (c) 2016 Peter Krauss</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_xml2dom" name="method_xml2dom" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">xml2dom()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">xml2dom(  <span class="argument">$input</span>,   <span class="argument">$flenLimit = 1000</span>,   <span class="argument">$opts = LIBXML_NOCDATA | LIBXML_NOENT</span>) </pre>
+                <p><em></em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$input </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$flenLimit </td>
+                                <td></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$opts </td>
+                                <td></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_xml2json" name="method_xml2json" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">xml2json()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">xml2json(  <span class="argument">$input</span>,   <span class="argument">$out_php = true</span>,   <span class="argument">$out_jsonml = true</span>,   <span class="argument">$out_array = true</span>,   <span class="argument">$flenLimit = 1000</span>) : \JSON</pre>
+                <p><em>Converts XML file (or XML string or DOMDocument) to JSON or to PHP array.</em></p>
+                <p>Use direct SimpleXML-JSON convertion or jsonML (see <a href="https://github.com/mckamey/jsonml">https://github.com/mckamey/jsonml</a>).</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$input </td>
+                                <td><p>string of filename or string of full XML or DOMDocument instance.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$out_php </td>
+                                <td><p>boolean true if whant PHP output, else will be JSON.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$out_jsonml </td>
+                                <td><p>boolean true if whant jsonML as outputformat, else will be SimpleXML-JSON.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$out_array </td>
+                                <td><p>boolean true if whant pure PHP array as output, else will be array with objects.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$flenLimit </td>
+                                <td><p>integer 0 or size limit for filename, only for safe.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \JSON
+                                            &mdash; <p>string or array of XML mapped data.</p>
+<p>NOTE: for other xml-json map strategies, see <a href="https://github.com/bramstein/xsltjson">https://github.com/bramstein/xsltjson</a>
+FUTURE function dom2json() can be used with XPath to select specific node or array of nodes.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_xpath2jsonML" name="method_xpath2jsonML" class="anchor"></a>
+            <article class="method">
+                <h3 class=" ">xpath2jsonML()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">xpath2jsonML(  <span class="argument">$input</span>,   <span class="argument">$xpquery = &#039;&#039;</span>,   <span class="argument">$out_php = true</span>,   <span class="argument">$out_array = true</span>) : \JSON</pre>
+                <p><em>Converts DOMNodeList resulted of a XPath query,
+into JSON or into PHP array.</em></p>
+                <p>Use direct jsonML as json-map (see <a href="https://github.com/mckamey/jsonml">https://github.com/mckamey/jsonml</a>).</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td></td>
+                                <td>$input </td>
+                                <td><p>string of filename or string of full XML or DOMDocument instance.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$xpquery </td>
+                                <td><p>string XPath expression.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$out_php </td>
+                                <td><p>boolean true if whant PHP output, else will be JSON.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td></td>
+                                <td>$out_array </td>
+                                <td><p>boolean true if whant pure PHP array as output, else will be array with objects.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \JSON
+                                            &mdash; <p>string or array of XML mapped data.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                    <dt>File</dt>
+                    <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                                                            <p>Default</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+        </div>
+    </section>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="reports/errors.html">Errors</a></li>
+                                    <li><a href="reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on November 2nd, 2016 at 23:44.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
