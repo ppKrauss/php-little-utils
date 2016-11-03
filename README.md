@@ -4,34 +4,34 @@ A curated set of small and util (frequent use) functions. Organizing by "blocks"
 All function  licenses are, perhaps, CC0, but MIT and similar are preserved, as main author (or main "code-collector")  reference. Only [opendefinition licenses](http://opendefinition.org/od/2.1/en/) are selected to this lib.
 
 ### XML-JSON convertion
-Functions [`xml2json`](http://ppkrauss.github.io/php-little-utils/docs/#method_xml2json), [`xml2dom`](http://ppkrauss.github.io/php-little-utils/docs/#method_xml2dom), [`xpath2jsonML`](http://ppkrauss.github.io/php-little-utils/docs/#method_xpath2jsonML).
+Functions [`xml2json`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_xml2json), [`xml2dom`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_xml2dom), [`xpath2jsonML`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_xpath2jsonML).
 See [GUIDE](xml2json.md), [source](src/xml2json.php) and [guide source](test/xml2json_test.php).
 
 Use universal [jsonML](http://json.org/) or specific [SimpleXML](http://php.net/manual/en/book.simplexml.php) conventions, to convert XML to JSON.
 
 ### Basic checks
 
-Functions [`is_cli`](http://ppkrauss.github.io/php-little-utils/docs/#method_is_cli), [`isFile`](http://ppkrauss.github.io/php-little-utils/docs/#method_isFile), ...
+Functions [`is_cli`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_is_cli), [`isFile`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_isFile), ...
 See [GUIDE](check.md), [source](src/check.php) and [guide source](test/check_test.php).
 
 ### Dual getopt
-Functions [`getopt_std`](http://ppkrauss.github.io/php-little-utils/docs/#method_getopt_std), ...
+Functions [`getopt_std`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_getopt_std), ...
 
 Getopt terminal+web. An extension, to optional webpage HTTP input options, of the native PHP [`getopt()`](http://php.net/manual/en/function.getopt.php).
 
 ### Associative array
 
-Functions [`file_csv`](http://ppkrauss.github.io/php-little-utils/docs/#method_file_csv),
-[`assoc_join`](http://ppkrauss.github.io/php-little-utils/docs/#method_assoc_join),
-[`assoc_merge`](http://ppkrauss.github.io/php-little-utils/docs/#method_assoc_merge),
-[`assoc_rename`](http://ppkrauss.github.io/php-little-utils/docs/#method_assoc_rename),
-[`assoc_unset`](http://ppkrauss.github.io/php-little-utils/docs/#method_assoc_unset).
+Functions [`file_csv`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_file_csv),
+[`assoc_join`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_assoc_join),
+[`assoc_merge`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_assoc_merge),
+[`assoc_rename`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_assoc_rename),
+[`assoc_unset`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_assoc_unset).
 
 ### String
 
 Functions
-[`str_getRoot`](http://ppkrauss.github.io/php-little-utils/docs/#method_str_getRoot),
-[`str_splitByRoot`](http://ppkrauss.github.io/php-little-utils/docs/#method_str_splitByRoot).
+[`str_getRoot`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_str_getRoot),
+[`str_splitByRoot`](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/#method_str_splitByRoot).
 
 ------
 
@@ -53,8 +53,6 @@ To [*assert*](https://en.wikipedia.org/wiki/Assertion_(software_development)) bl
 
 # Docs generation
 
-Note: testing [Doxygen-docs](http://ppkrauss.github.io/php-little-utils/docs/html/files.html) and [PHPdocs](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/index.html).
+Note: testing [Doxygen at docs/html](http://ppkrauss.github.io/php-little-utils/docs/html/files.html)  and [PHPdocs at docs/html_phpdoc](http://ppkrauss.github.io/php-little-utils/docs/html_phpdoc/index.html) (see [phpDocumentor2](https://github.com/phpDocumentor/phpDocumentor2)).
 
-Use ``doxywizard Doxyfile` to Doxygen docs, and `phpdoc run -d  src -t docs/html_phpdoc`.
-
-
+Using  `doxygen -g Doxyfile` or `doxywizard Doxyfile` to Doxygen docs, and `phpdoc run -d  src -t docs/html_phpdoc`.
