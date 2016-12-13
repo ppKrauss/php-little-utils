@@ -73,6 +73,35 @@ function file_csv($file, $opt=[], $length=0, resource $context=NULL) {
 	return $opt['head']? array($header,$lines): $lines;
 }
 
+/**
+ * Standard "save array as CSV file".
+ * CSV conventions by default options of the build-in fputcsv() function.
+ * @param $f string filename (.csv) with path.
+ * @param $a array (of arrays or of associative arrays).
+ * @param $head array header.
+ * @output file with CSV.
+ */
+function array_saveAsCsv($f,$a,$header=NULL,$isAssoc=true) {
+	
+	if ($header===NULL) {
+		if ($isAssoc) 
+			$header = array_keys($a[0]);
+		else {
+			$header = $a[0];
+			unset($a[0]);
+		}
+	} //elseif ( $isAssoc && count($header) < count(array_keys($a[0])) ) 
+	$fp = fopen($f, 'w');
+	fputcsv($fp,$header);
+	foreach($a as $idx=>$r0) {
+		$r = [];
+		if ($isAssoc) { foreach($header as $i) $r[] = isset($r0[$i])? $r0[$i]: ''; }
+		else $r = $r0;
+		fputcsv($fp,$r);
+	}
+	return 1;
+}
+
 
 /**
  * Joins a set of key-value pairs by $pairSep, and all pairs of the set by $sep.
