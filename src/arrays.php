@@ -181,3 +181,21 @@ function array_ofKey($key,$a,$ignoreNulls=true) {
 			$r[]=$x[$key];
   return $r;
 }
+
+
+/**
+ * Set default values when need it.
+ * For commom arrays: merge most right values,
+ *  tipically default values from a big-default-array to a little-array.
+ * For associative arrays: preserve the array and add key-values of the default.
+ * @param $a the input array.
+ * @param $dft the default array.
+ * @param $isAssoc must be true when $a is associative. (avoid cost of detection)
+ */
+function array_defaults($a,$dft,$isAssoc=false) {
+  if ($isAssoc)
+    return array_merge( $dft, $a );
+  else
+    return array_merge( $a, array_slice($dft,count($dft)) );
+}
+
